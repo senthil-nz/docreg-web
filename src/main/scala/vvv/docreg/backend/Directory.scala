@@ -100,7 +100,7 @@ class DirectoryImpl extends LDAPVendor with Directory {
       case other =>
         other
     }
-    "userPrincipalName=" + u + User.domain
+    "sAMAccountName=" + u
   }
 
   def findFromPartialName(partialName: String): Box[UserAttributes] = {
